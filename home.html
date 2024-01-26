@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>atputasmajas</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('https://www.robertlandscapes.com/wp-content/uploads/2022/06/Robert-Landscapes_Tips-For-A-Modern-Garden-Design.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .transparent-box {
+      background: rgba(70, 70, 70, 0.7);
+      padding: 80px;
+      border-radius: 40px;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    h1 {
+      z-index: 2;
+      position: relative;
+    }
+
+    .button-container {
+      overflow: hidden;
+    }
+
+    .button {
+      background-color: #dba134;
+      color: #000000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      transform: translateY(5px);
+    }
+
+    .hidden-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    .button-container.open .hidden-content {
+      max-height: 100px;
+    }
+
+    .hidden-content a {
+      display: block;
+      margin-top: 10px;
+      color: #3b99c5;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="transparent-box">
+      <h1>Atpūtas mājas</h1>
+
+      <div class="button-container">
+        <button class="button" onclick="toggleContent()">lasīt vairāk</button>
+        <div class="hidden-content">
+          <p>Izīrējiet sev atpūtas māju brīvām dienām. Mājas ir modernas, skaistas un ērtas. Vairāk varat atrast spiežot uz linka -</p>
+          <a href="https://www.airbnb.lv/">airbnb</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent() {
+      const buttonContainer = document.querySelector('.button-container');
+      buttonContainer.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
